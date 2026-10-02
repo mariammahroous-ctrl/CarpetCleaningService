@@ -1,0 +1,16 @@
+1-why the output of this Equation = $30.00?
+
+The expression X + Y calculates 10 + 20 which equals 30. When we put :C after it, C# understands that this number represents currency. So it automatically formats 30 into money format by adding the dollar sign $ and two zeros for decimals .00, which makes it $30.00.
+
+2-what is its benefit?
+
+It saves time because we don't need to write extra code to add currency signs or format decimals manually. It also changes the currency sign automatically based on the user's country settings, and it makes the output look clean and professional for users.
+
+3-try another example with a different specifier
+
+A real world example is calculating a discount percentage in an online store. If a product has a 20% discount, in code we store it as 0.20. To display it nicely to the customer as 20.00%, we use the percent specifier :P like this:
+double discount = 0.20;
+Console.WriteLine($"Discount: {discount:P}");
+Output:
+Discount: 20.00%
+Explanation: The :P specifier multiplies 0.20 by 100 and adds the % sign automatically.
